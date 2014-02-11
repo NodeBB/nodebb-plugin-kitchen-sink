@@ -1,0 +1,33 @@
+{
+  "name": "nodebb-plugin-kitchen-sink",
+  "version": "0.0.1",
+  "description": "NodeBB Kitchen Sink",
+  "main": "library.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/psychobunny/nodebb-plugin-kitchen-sink"
+  },
+  "keywords": [
+    "nodebb",
+    "plugin",
+    "kitchen",
+    "sink",
+    "example",
+    "tutorial"
+  ],
+  "author": {
+    "name": "psychobunny",
+    "email": "psycho.bunny@hotmail.com"
+  },
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/psychobunny/nodebb-plugin-kitchen-sink/issues"
+  },
+  "readme": "",
+  "readmeFilename": "README.md",
+  "_id": "nodebb-plugin-kitchen-sink@0.0.1",
+  "_from": "nodebb-plugin-kitchen-sink@~0.0.1"
+}

@@ -1,0 +1,13 @@
+{
+	"id": "nodebb-plugin-kitchen-sink",
+	"name": "NodeBB Kitchen Sink",
+	"description": "This repo will serve as a sample for all action/filter hooks available in NodeBB.",
+	"url": "https://github.com/psychobunny/nodebb-plugin-kitchen-sink",
+	"library": "./library.js",
+	"hooks": [
+		{
+			"hook": "filter:user.settings", "method": "addUserSettings", "callbacked": true
+		}
+	],
+	"staticDir": "./public"
+}
