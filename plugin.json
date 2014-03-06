@@ -7,7 +7,17 @@
 	"hooks": [
 		{
 			"hook": "filter:user.settings", "method": "addUserSettings", "callbacked": true
+		},
+		{
+			"hook": "action:app.load", "method": "init"
+		},
+		{
+			"hook": "filter:header.build", "method": "addNavigation", "callbacked": false
+		},
+		{
+			"hook": "filter:admin.header.build", "method": "addAdminNavigation", "callbacked": false
 		}
 	],
-	"staticDir": "./public"
+	"staticDir": "./public",
+	"templates": "./templates"
 }
