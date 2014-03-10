@@ -6,19 +6,11 @@
 	function renderSink(req, res, next) {
 		var data = { test: [{"name": "psychobunny"},{"name": "barisusakli"},{"name": "julianlam"}] };
 
-		if (res.locals.isAPI) {
-			res.json(data);
-		} else {
-			res.render('demo', data)
-		}
+		res.render('demo', data)
 	}
 
 	function renderAdmin(req, res, next) {
-		if (res.locals.isAPI) {
-			res.json({});
-		} else {
-			res.render('admin/kitchen-sink', {});
-		}
+		res.render('admin/kitchen-sink', {});
 	}
 
 	Plugin.init = function(app, middleware, controllers) {
