@@ -55,5 +55,10 @@
 		callback(null, settings);
 	};
 
+	Plugin.addAdminScripts = function(scripts, callback) {
+		scripts.push('/plugins/nodebb-plugin-kitchen-sink/lib/admin.js');
+		callback(null, scripts);
+	};
+
 	module.exports = Plugin;
 }(module));
