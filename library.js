@@ -54,6 +54,22 @@
 
 		callback(null, settings);
 	};
+	
+	Plugin.getUserSettings = function(data, callback) {
+		db.getObjectField('user:' + data.uid + ':settings', 'userTitle', function(err, title) {
+			if (err) {
+				callback(err);
+			}	
+			data.settings.userTitle = title;
+			callback(null, data);
+		});	
+	};
+	
+	Plugin.saveUserSettings = function(data) {
+		if (data.uid && data.userTitle) {
+			db.setObjectField('user:' + data.uid + ':settings', 'userTitle', data.userTitle);
+		}
+	};
 
 	Plugin.addAdminScripts = function(scripts, callback) {
 		scripts.push('/plugins/nodebb-plugin-kitchen-sink/lib/admin.js');
