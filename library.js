@@ -1,12 +1,13 @@
 (function(module) {
 	"use strict";
 
-	var Plugin = {};
+	var Plugin = {},
+		db = module.parent.require('../src/database');
 
 	function renderSink(req, res, next) {
 		var data = { test: [{"name": "psychobunny"},{"name": "barisusakli"},{"name": "julianlam"}] };
 
-		res.render('demo', data)
+		res.render('demo', data);
 	}
 
 	function renderAdmin(req, res, next) {
@@ -32,7 +33,7 @@
 			]
 		);
 
-		return header;
+		callback(null, header);
 	};
 
 	Plugin.addAdminNavigation = function(header, callback) {
@@ -42,7 +43,7 @@
 			name: 'Kitchen Sink'
 		});
 
-		return header;
+		callback(null, header);
 	};
 
 	Plugin.addUserSettings = function(settings, callback) {
