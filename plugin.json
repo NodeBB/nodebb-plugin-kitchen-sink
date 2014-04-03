@@ -6,19 +6,19 @@
 	"library": "./library.js",
 	"hooks": [
 		{
-			"hook": "filter:user.settings", "method": "addUserSettings", "callbacked": true
+			"hook": "filter:user.settings", "method": "addUserSettings"
 		},
 		{
 			"hook": "action:app.load", "method": "init"
 		},
 		{
-			"hook": "filter:header.build", "method": "addNavigation", "callbacked": false
+			"hook": "filter:header.build", "method": "addNavigation"
 		},
 		{
-			"hook": "filter:admin.header.build", "method": "addAdminNavigation", "callbacked": false
+			"hook": "filter:admin.header.build", "method": "addAdminNavigation"
 		},
 		{
-			"hook": "filter:admin.scripts.get", "method": "addAdminScripts", "callbacked": true
+			"hook": "filter:admin.scripts.get", "method": "addAdminScripts"
 		}
 	],
 	"staticDir": "./public",
