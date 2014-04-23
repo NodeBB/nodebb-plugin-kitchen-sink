@@ -11,15 +11,15 @@
 	}
 
 	function renderAdmin(req, res, next) {
-		res.render('admin/plugins/kitchen-sink', {});
+		res.render('admin/kitchen-sink', {});
 	}
 
 	Plugin.init = function(app, middleware, controllers) {
 		app.get('/my_demo', middleware.buildHeader, renderSink);
 		app.get('/api/my_demo', renderSink);
 
-		app.get('/admin/plugins/kitchen-sink', middleware.admin.buildHeader, renderAdmin);
-		app.get('/api/admin/plugins/kitchen-sink', renderAdmin);
+		app.get('/admin/kitchen-sink', middleware.admin.buildHeader, renderAdmin);
+		app.get('/api/admin/kitchen-sink', renderAdmin);
 	};
 
 	Plugin.addNavigation = function(header, callback) {
@@ -38,7 +38,7 @@
 
 	Plugin.addAdminNavigation = function(header, callback) {
 		header.plugins.push({
-			route: '/plugins/kitchen-sink',
+			route: '/kitchen-sink',
 			icon: 'fa-tint',
 			name: 'Kitchen Sink'
 		});
