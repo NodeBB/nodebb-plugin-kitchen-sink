@@ -7,7 +7,7 @@
 	function renderSink(req, res, next) {
 		var data = { test: [{"name": "psychobunny"},{"name": "barisusakli"},{"name": "julianlam"}] };
 
-		res.render('my-demo', data);
+		res.render('demo', data);
 	}
 
 	function renderAdmin(req, res, next) {
@@ -15,8 +15,8 @@
 	}
 
 	Plugin.init = function(app, middleware, controllers) {
-		app.get('/my-demo', middleware.buildHeader, renderSink);
-		app.get('/api/my-demo', renderSink);
+		app.get('/demo', middleware.buildHeader, renderSink);
+		app.get('/api/demo', renderSink);
 
 		app.get('/admin/kitchen-sink', middleware.admin.buildHeader, renderAdmin);
 		app.get('/api/admin/kitchen-sink', renderAdmin);
@@ -26,7 +26,7 @@
 		header.navigation = header.navigation.concat(
 			[
 				{
-					route: '/my-demo',
+					route: '/demo',
 					class: '',
 					text: "Kitchen Sink"
 				}
