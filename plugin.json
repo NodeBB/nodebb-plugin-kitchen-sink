@@ -9,7 +9,7 @@
 			"hook": "filter:user.settings", "method": "addUserSettings"
 		},
 		{
-			"hook": "filter:user.getSettings", "method": "getUserSettings", "callbacked": true
+			"hook": "filter:user.getSettings", "method": "getUserSettings"
 		},
 		{
 			"hook": "action:user.saveSettings", "method": "saveUserSettings"
