@@ -1,6 +1,6 @@
 {
   "name": "nodebb-plugin-kitchen-sink",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "NodeBB Kitchen Sink",
   "main": "library.js",
   "scripts": {
