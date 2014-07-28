@@ -6,6 +6,9 @@
 	"library": "./library.js",
 	"hooks": [
 		{
+			"hook": "static:app.load", "method": "init"
+		},
+		{
 			"hook": "filter:user.settings", "method": "addUserSettings"
 		},
 		{
@@ -13,9 +16,6 @@
 		},
 		{
 			"hook": "action:user.saveSettings", "method": "saveUserSettings"
-		},
-		{
-			"hook": "action:app.load", "method": "init"
 		},
 		{
 			"hook": "filter:header.build", "method": "addNavigation"

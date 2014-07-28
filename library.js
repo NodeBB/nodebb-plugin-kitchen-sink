@@ -45,9 +45,10 @@
 	*/
 
 	// action:app.load
-	Plugin.init = function(app, middleware, controllers) {
+	Plugin.init = function(app, middleware, controllers, callback) {
 		require('./lib/customRoutes')(app, middleware, controllers);
 		require('./lib/adminPage')(app, middleware, controllers);
+		callback();
 	};
 
 
