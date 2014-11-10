@@ -44,8 +44,12 @@
 	action:topic.delete
 	*/
 
-	// action:app.load
-	Plugin.init = function(app, middleware, controllers, callback) {
+	// static:app.load
+	Plugin.init = function(params, callback) {
+		var app = params.app,
+			middleware = params.middleware,
+			controllers = params.controllers;
+			
 		require('./lib/customRoutes')(app, middleware, controllers);
 		require('./lib/adminPage')(app, middleware, controllers);
 		callback();
